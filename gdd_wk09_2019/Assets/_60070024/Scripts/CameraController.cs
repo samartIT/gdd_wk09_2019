@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour
     {
         cameraTopView = Camera.main;
         cameraTopView.enabled = true;
-        cameraTopView.enabled = false;
+        cameraFPSView.enabled = false;
     }
 
     void Update()
