@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
     Camera cameraTopView;
     public Camera cameraFPSView;
-    // Start is called before the first frame update
+
     void Start()
     {
         cameraTopView = Camera.main;
@@ -14,12 +14,11 @@ public class CameraController : MonoBehaviour
         cameraFPSView.enabled = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.C)) {
             cameraTopView.enabled = !cameraTopView.enabled;
-            cameraFPSView.enabled = !cameraFPSView.enabled
+            cameraFPSView.enabled = !cameraFPSView.enabled;
         }
     }
 }
