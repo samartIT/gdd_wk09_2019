@@ -20,7 +20,7 @@ public class FPSInput : MonoBehaviour
         float deltaZ = Input.GetAxis("Vertical") * speed;
         Vector3 movement = new Vector3(deltaX, 0, deltaZ);
         movement = Vector3.ClampMagnitude(movement, speed);
-        //transform.Translate(deltaX * Time.deltaTime, 0, deltaZ * Time.deltaTime);
+        transform.Translate(deltaX * Time.deltaTime, 0, deltaZ * Time.deltaTime);
 
         movement.y = gravity;
         movement *= Time.deltaTime;

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-    public enum RotationAxes{
+    public enum RotationAxes
+    {
         MouseXAndY = 0,
         MouseX = 1,
         MouseY = 2
@@ -32,18 +33,22 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (axes == RotationAxes.MouseX){
-            thransfrom.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
+        if (axes == RotationAxes.MouseX)
+        {
+            transform.Rotate (0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
             //move horizontally, around Y-axis
-        } else if (axes == RotationAxes.MouseY){
+        }
+        else if (axes == RotationAxes.MouseY)
+        {
             _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVer;
             _rotationX = Mathf.Clamp(_rotationX, minimumVer, maximumVer);
 
-            float rotationY = transform.localEulerAngles;
+            float rotationY = transform.localEulerAngles.y;
             transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
             //move vertically, around X-axis
         }
-        else{
+        else
+        {
             _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVer;
             _rotationX = Mathf.Clamp(_rotationX, minimumVer, maximumVer);
 

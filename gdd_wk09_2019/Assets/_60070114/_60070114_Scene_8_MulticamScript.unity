@@ -504,7 +504,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1491700935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e620dc27a4ade884b8a516f8c908bb7e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a6d84af45309b64083ea3e444fe9b28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cameraFPSView: {fileID: 801110245}
